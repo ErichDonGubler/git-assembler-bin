@@ -1,0 +1,4 @@
+[submodule "vendor/git-assembler"]
+	path = vendor/git-assembler
+	url = https://github.com/ErichDonGubler/git-assembler
+	branch = erichdongubler/pyoxidizer-prep
