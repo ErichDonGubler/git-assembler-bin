@@ -31,10 +31,10 @@ def make_install(exe):
 
 def make_msi(exe):
     return exe.to_wix_msi_builder(
-        "git-assembler",
-        "git-assembler",
-        "1.0",
-        "TODO, distributed by Erich Gubler"
+        id_prefix="git_assembler",
+        product_name="git-assembler",
+        product_version="1.0",
+        product_manufacturer="TODO, distributed by Erich Gubler"
     )
 
 register_target("exe", make_exe)
