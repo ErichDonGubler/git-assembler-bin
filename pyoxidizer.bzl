@@ -37,6 +37,37 @@ def make_msi(exe):
         product_manufacturer="TODO, distributed by Erich Gubler"
     )
 
+
+def register_code_signers():
+    if not VARS.get("ENABLE_CODE_SIGNING"):
+        return
+
+    # Use a code signing certificate in a .pfx/.p12 file, prompting the
+    # user for its path and password to open.
+    # pfx_path = prompt_input("path to code signing certificate file")
+    # pfx_password = prompt_password(
+    #     "password for code signing certificate file",
+    #     confirm = True
+    # )
+    # signer = code_signer_from_pfx_file(pfx_path, pfx_password)
+
+    # Use a code signing certificate in the Windows certificate store, specified
+    # by its SHA-1 thumbprint. (This allows you to use YubiKeys and other
+    # hardware tokens if they speak to the Windows certificate APIs.)
+    # sha1_thumbprint = prompt_input(
+    #     "SHA-1 thumbprint of code signing certificate in Windows store"
+    # )
+    # signer = code_signer_from_windows_store_sha1_thumbprint(sha1_thumbprint)
+
+    # Choose a code signing certificate automatically from the Windows
+    # certificate store.
+    # signer = code_signer_from_windows_store_auto()
+
+    # Activate your signer so it gets called automatically.
+    # signer.activate()
+
+register_code_signers()
+
 register_target("exe", make_exe)
 register_target("resources", make_embedded_resources, depends=["exe"], default_build_script=True)
 register_target("install", make_install, depends=["exe"], default=True)
