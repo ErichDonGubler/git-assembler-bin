@@ -33,7 +33,7 @@ def make_msi(exe):
     return exe.to_wix_msi_builder(
         id_prefix="git_assembler",
         product_name="git-assembler",
-        product_version="1.0",
+        product_version="1.4",
         product_manufacturer="TODO, distributed by Erich Gubler"
     )
 
