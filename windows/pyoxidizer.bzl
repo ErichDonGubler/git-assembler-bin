@@ -15,7 +15,7 @@ def make_exe():
     )
     exe.windows_subsystem = "console"
     exe.add_python_resources(exe.read_package_root(
-       path= "./vendor/git-assembler/",
+       path= "../vendor/git-assembler/",
        packages=["git-assembler"],
     ))
     return exe
