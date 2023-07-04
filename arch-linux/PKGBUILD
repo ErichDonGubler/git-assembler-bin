@@ -1,0 +1,8 @@
+pkgname="git-assembler"
+pkgdesc="update git branches using high-level instructions"
+url="https://github.com/ErichDonGubler/git-assembler"
+pkgver=1.4
+pkgrel=1
+arch=('any')
+license=('GPL')
+depends=('git' 'python')
